@@ -1,0 +1,1938 @@
+{
+	"info": {
+		"_postman_id": "138101e9-9176-4cbf-8d39-792fee6d802f",
+		"name": "Attestation project x/o_autotests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get token for Player1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f3988921-3716-4f3b-9566-74df3014b38a",
+						"exec": [
+							"let html = cheerio(responseBody);\r",
+							"\r",
+							"token_p1 = html.find('[name=\"authenticity_token\"]').attr('value')\r",
+							"\r",
+							"pm.environment.set(\"token_p1\", token_p1);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"get_authenticity_token was succeed\", function () {\r",
+							"    pm.expect(token_p1).to.eql(html.find('[name=\"authenticity_token\"]').attr('value'));\r",
+							"});\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"strictSSL": false
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "none"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "document"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{Set-Cookie_p1}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign_in for player1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "35113562-50ec-43dc-97e6-86c112f166ea",
+						"exec": [
+							"let html = cheerio(responseBody);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"csrf_token_p1 = html.find('[name=\"csrf-token\"]').attr('content')\r",
+							"\r",
+							"pm.environment.set(\"csrf-token_p1\", csrf_token_p1);\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "document"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/users/sign_in"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user[email]",
+							"value": "egorhejfec@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "user[password]",
+							"value": "test007007",
+							"type": "text"
+						},
+						{
+							"key": "user[remember_me]",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "commit",
+							"value": "Войти",
+							"type": "text"
+						},
+						{
+							"key": "authenticity_token",
+							"value": "{{token_p1}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create game",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bafae8aa-6843-48d0-b32f-e968e926ae32",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "9c068a44-0445-4eb1-9eb7-a5e3c2f35f29",
+						"exec": [
+							"let jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"pm.environment.set(\"id_game\", jsonData.game.id);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Game was created\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.game.id).not.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "current",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46630682-0578-4d3b-b033-7930af8469de",
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"user_id_player1\", jsonData.user.id );\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get current user\", function () {\r",
+							"    pm.expect(jsonData.user).not.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/users/current",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get token for Player2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8f07a596-90bf-47f6-860e-4c79a486aa56",
+						"exec": [
+							"let html = cheerio(responseBody);\r",
+							"\r",
+							"token_p2 = html.find('[name=\"authenticity_token\"]').attr('value')\r",
+							"\r",
+							"pm.environment.set(\"token_p2\", token_p2);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"get_authenticity_token was succeed\", function () {\r",
+							"    pm.expect(token_p2).to.eql(html.find('[name=\"authenticity_token\"]').attr('value'));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "none"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "document"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=FbKxSXm34Qnte7RELYbCHAI39h1rATMpWW7nhcBlEF6N38v6VIPgKFrwRaC2q9c9krRA%2BFhodid4n7t3JBQbXFeSnmHBCzWL23P6sMkERpMB5DaCGkLYRdb0vAxYCezzq7uBAO4PR3aQy2IOUc02p7WdtnamqK0m00yWDtMfgLof0yP1g9uKegQPK7EmZke2sa4fdKXMD49X0WHbHSsZrVRCEhSR13cWjSa8J2rAK1fEtbiD7jB%2BaZouocCTI21Iu%2F3FSakFUyUs8KRbn6o9Y92ZXKxjrgNrQ3mW8BwSCGM99JoGVr9G%2BtyrVPX49ZqMFwMOP7dtqmsjMWeqUfP%2FVa4zD3XfGALmMw9QcgXD11YBFrkbu629lEh1AjILp6uwE0jwimWbBi2FQkQ5Dikh4n5usGUWbjv9tthznz0nMLGQ1t1wqyS%2BUq4YQsYeQOUvkshJYVr%2BIR9tnAZ2yb8QH4KD8BqlcFb5NA%3D%3D--NAGrmjaMRTZsE22F--riVAMSh3O%2Bijn%2BWx2ycXAg%3D%3D",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sign_in for player2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1af8850a-7079-4226-9fe8-4dc20be21352",
+						"exec": [
+							"let html = cheerio(responseBody);\r",
+							"\r",
+							"csrf_token_p2 = html.find('[name=\"csrf-token\"]').attr('content')\r",
+							"\r",
+							"pm.environment.set(\"csrf-token_p2\", csrf_token_p2);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Cache-Control",
+						"value": "max-age=0"
+					},
+					{
+						"key": "Upgrade-Insecure-Requests",
+						"value": "1"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "navigate"
+					},
+					{
+						"key": "Sec-Fetch-User",
+						"value": "?1"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "document"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/users/sign_in"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user[email]",
+							"value": "workcrazydog@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "user[password]",
+							"value": "test007007",
+							"type": "text"
+						},
+						{
+							"key": "user[remember_me]",
+							"value": "0",
+							"type": "text"
+						},
+						{
+							"key": "commit",
+							"value": "Войти",
+							"type": "text"
+						},
+						{
+							"key": "authenticity_token",
+							"value": "{{token_p2}}",
+							"type": "text"
+						}
+					],
+					"options": {
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get game for player2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5b4ae467-66a4-4444-a1c4-34632cbda34c",
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"make_step_p1_1\", jsonData.cells[0][0].id);\r",
+							"pm.environment.set(\"make_step_p2_1\", jsonData.cells[1][0].id);\r",
+							"pm.environment.set(\"make_step_p1_2\", jsonData.cells[0][1].id);\r",
+							"pm.environment.set(\"make_step_p2_2\", jsonData.cells[1][1].id);\r",
+							"pm.environment.set(\"make_step_p1_3\", jsonData.cells[0][2].id);\r",
+							"pm.environment.set(\"make_step_p2_3\", jsonData.cells[1][2].id);\r",
+							"pm.environment.set(\"make_step_p1_4\", jsonData.cells[0][3].id);\r",
+							"pm.environment.set(\"make_step_p2_4\", jsonData.cells[1][3].id);\r",
+							"pm.environment.set(\"make_step_p1_5\", jsonData.cells[0][4].id);\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get game for player2\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.cells).not.eql(null);\r",
+							"});\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p2}}"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+					},
+					{
+						"key": "Cookie",
+						"value": "remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ilcxc3hPRjBzSWlReVlTUXhNaVJFWlVNM1JWWjVPVTVDYWsxck9HMW5ZV1ZMTG1kbElpd2lNVFl3TkRReE5Ea3pPQzR3TkRNME5qazNJbDA9IiwiZXhwIjoiMjAyMC0xMS0xN1QxNDo0ODo1OC4wNDNaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX3VzZXJfdG9rZW4ifX0%3D--e882fe9dae1fb125e1f2858441d852bfed264b2e; _nerve_ai_session=7WhkMg2oHafG7Nz%2B0z2GuHYiAij%2FiJMRH%2BSqke4REC7Zhab4M3sjnj4LH1YzUtSKRLLPvGvOs5ZjXniZD55bbhsVesQ88%2FrreMctloLXZsV%2F7r%2B9wa87CAZdvx7e79RaMF%2FwUiV135A5aBHlcr1XkfnRaY%2FBoT%2F1PD1tW%2BsUExOmD5g1wmz16D%2F1SR2114Iu7JMsgogdeV%2FIEnAgQsv2%2BZsg134R4BEGOhVTGFkWLiahSUM30rNY7eRYa4ONaFKWDvmoyVOH0YZFGUYNTeonVmXh4RI4VZHhePFUbnoiHv%2FTLDfBurbjX3l9TQvapvRWiOtYeAjmY6e5pyORUAXqAitK7oxBm3512JCEB%2F3kbZzAkcLJiiCxMScQC5Kkl4kJL3B7UQ9S%2BwZQhJ1uep6AcZb3DSojhW6dv9ZJMk3AyxAYughbPTIgX3%2BFwonxrP5xRa3%2B%2F00ML4rTgVXUi5jI48tq4FhOoUznqujCYoI6ewMGhZMOw55DBf83X1ZDuC6lf3VlWp5QXqJOz%2FpV9Bu8z4rPztCJqzYJdj8eiNzgYeJelzBI3w%3D%3D--E5uE2V03sulqynqK--J8gOvLW8l22jPy68Eb8v7g%3D%3D"
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check current game who won",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "6286337a-2dd2-408c-be46-d1a92a4ef547",
+						"exec": [
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Game was checked for player1\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.cells).not.eql(null);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=3LrAam%2BH3gx0EFmDWXs891urcPcTP5a0Ip4A7vsY%2BHCssbJPIRDFU9WDRXNMmjT8FqnKrnEPO65KyYnJu7CFOygcR6PWjZf8oA3V9h%2FJw6rqdsvbMUSAmX0II5biFc2DQmMN%2B0FG2kkcYA8IsMjpLjeST5t9UAcBQ4MujshrUkUllM6MI28h7B0NNeZDdoyxOiKcqNneXBwn6PO8rRtyQKN0Ey6o89UZDbUWZqHwpJOtgTv35vKx8Rb8Vp8fuT5p73dmA3iFlb8Y8BVjWAjgo3I%2B%2FpwivzkqAgoiXMHKOwvaOfFo9r3lO3Aj%2BFx7bZjZuHdz7EXeal0DdLiLPGI6kJG83AnokSymEjPFdAxYhrQCMT9kU5hakjZKmf94vJ5vMnLB7rWm7NEEFj8Rw3a3fyz2AOD9%2BTht8tRvIYOz2dtYleVsZ5cmooqEQUKJLw5BiCpb%2F8o9V%2Bi%2Bye%2Bm6vNHN%2BROBAo1a90TmTwf3oFikuB0U0Xy3OLYA%2BN3K7RPIZOqnMUZtJbuIwWt6vPb%2FvqSNActfyzd1PybedxEPkbr%2FLFhA47EFw%3D%3D--JMrEP63ALEAFMz03--0Z0fYUqJePo94uKHtDD%2F8Q%3D%3D"
+					},
+					{
+						"key": "If-None-Match",
+						"value": "W/\"82fffa2ec5c33d62181106da50215a54\""
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "join_to_game_for_player_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "db753e73-966c-4579-a4fc-2c326e8c6edc",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{token_p2}}"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "{{Set-Cookie_p2}}"
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get game for player1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "cddf05d3-0709-41c7-8d34-12be86f3b6cd",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Get game for player1\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.cells).not.eql(null);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+					},
+					{
+						"key": "Cookie",
+						"value": "remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ilcxc3hPRjBzSWlReVlTUXhNaVJFWlVNM1JWWjVPVTVDYWsxck9HMW5ZV1ZMTG1kbElpd2lNVFl3TkRReE5Ea3pPQzR3TkRNME5qazNJbDA9IiwiZXhwIjoiMjAyMC0xMS0xN1QxNDo0ODo1OC4wNDNaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX3VzZXJfdG9rZW4ifX0%3D--e882fe9dae1fb125e1f2858441d852bfed264b2e; _nerve_ai_session=7WhkMg2oHafG7Nz%2B0z2GuHYiAij%2FiJMRH%2BSqke4REC7Zhab4M3sjnj4LH1YzUtSKRLLPvGvOs5ZjXniZD55bbhsVesQ88%2FrreMctloLXZsV%2F7r%2B9wa87CAZdvx7e79RaMF%2FwUiV135A5aBHlcr1XkfnRaY%2FBoT%2F1PD1tW%2BsUExOmD5g1wmz16D%2F1SR2114Iu7JMsgogdeV%2FIEnAgQsv2%2BZsg134R4BEGOhVTGFkWLiahSUM30rNY7eRYa4ONaFKWDvmoyVOH0YZFGUYNTeonVmXh4RI4VZHhePFUbnoiHv%2FTLDfBurbjX3l9TQvapvRWiOtYeAjmY6e5pyORUAXqAitK7oxBm3512JCEB%2F3kbZzAkcLJiiCxMScQC5Kkl4kJL3B7UQ9S%2BwZQhJ1uep6AcZb3DSojhW6dv9ZJMk3AyxAYughbPTIgX3%2BFwonxrP5xRa3%2B%2F00ML4rTgVXUi5jI48tq4FhOoUznqujCYoI6ewMGhZMOw55DBf83X1ZDuC6lf3VlWp5QXqJOz%2FpV9Bu8z4rPztCJqzYJdj8eiNzgYeJelzBI3w%3D%3D--E5uE2V03sulqynqK--J8gOvLW8l22jPy68Eb8v7g%3D%3D"
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "bdb5f9b3-2d0a-4635-84fe-3aeea76290b2",
+						"exec": [
+							"pm.test(\"Move_1 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=k3nkZY9eRyZXCa3Lly%2BSNzEjgIpMPM1WpnVbdlHjTjdwGZyY2vRM0Bp8lfEsXHDs7jAIcDZMueUHMAAzyHtRZO6M%2FPe8iTrB9pjw5ZrUdDukLUNSpiR6xlJCZqkwklFP61HZBKVh6DyBXI6m2GGSJ8X6bcoiRmbNIUr1vrGNf21E4S%2F9eRSP79ZG4N0m3UvGrdJ9fWLKg5jpHoCldJwU%2FZ2I1W22zqysgOuCJ1Wgb3GzqBu1q0eUaVvUl7EYsTOL3mlkVZymbbTukPsN9w%2FWr9U3LUuBXpbsphrCWfOSEYPW5hRTBkdui4q6F2nPNJBoFJCADXkYH0CUMmyBRW7oZDi%2B6pwlOieEOgyUXIfZa7FLxLERBCoOcEf6jVOR6%2BubwuvWYJQ46KnQtCAj5nXV2khpwrYpcZh8Po0Bn%2F57sP35Bd%2FqK2amRq6ngjrgvwgej7NMx0vow094U1xigydsYF%2B6qpCJ9pHfhfp%2BSNyecEwyUgw%2F6jixdyj9XcO3OEXoGxtyh3xcVDKK%2BWhHS7SYaZPE9yj04ABNRJcZMk3kqA4LpsBEkA%3D%3D--gi8UEEDK1u1qjTLV--gyk%2Bo6gP26%2BlRlfGZ0hAGA%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p1_1}},\"game_id\":{{id_game}},\"x\":1,\"y\":1,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5a87d162-aa83-4df3-b599-65ccb9340db6",
+						"exec": [
+							"pm.test(\"Move_2 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p2}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=YgWSSzNVQqHH6EpJybb0RxmDn5K2jEN6%2BAFDP5LJvg8G0MWpzYaxzi%2BkktrA%2BG2mu0vWLcSiSGJC1xZqtU1Fgu9ZR8yCXOXSQszimw1%2B8UqFHVuxMBUoRO0R91qXmQbdGClOIIALIdC9C%2BlhnIEz9VucG36jdgsyL2uPjytjY2%2B077SjaBwihQVQJtmhB6sdUcrMSnQ8kP%2BKmgmw9CkhA8z%2FGzzRmxJtTCNCUCc6m6drOuK6XByJPPuInpAnuFJ2grX9mdGvlQOJ83XbDwZONm0f5j63pxZWgLBNNm6prCAOVE8eHxaillWyNppp0i9C4%2BBo296ko3ttqf30sdCaCrK%2BmuNybpLbbEEdUQ01dFNpeBgriR8NV4op7%2FOpW%2Fs9ZsEiafpbKnABB3sRYl%2FKfNMW2R7pk8Q%2Fr4tZRfzKJUrpPnZgjSQF2M3pjNS%2FEgJ1bKJbQ9ox89y1Y%2BOjN3I3EFyTLXTX2uL8fwY4azXWujmASH3b6pExeKSaXeX%2B1sN8RDqHFN0l4o8HOv8GBzCJ1%2Bl7t%2BtHBd2S7YlLqhwAtLl4JYkw9Q%3D%3D--e77avNSjbzyBMKy6--a%2FSWXAEDOAYorZiJmTpFQg%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p2_1}},\"game_id\":{{id_game}},\"x\":1,\"y\":2,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_3",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "a3352f46-cf96-439e-a257-4d5777126d19",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "52ba51fb-14f6-40f2-8d66-5dff3aa8fecd",
+						"exec": [
+							"pm.test(\"Move_3 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=qeGuJOM92ERykdCiS1fIjQWM9uhPHtMMlQtKcadQi%2Fmf8BE9nn25AUYudG8sOrG67tR2E3lr3MMUrsSMMReS50zgnj9XyvdW3FP4lb6oYVTAAFmDcBDQQC8nUsbnQHQ2b%2FHjR0wLEPzS3it4dMBiwatg8KVAtQW7DEMmPAXixMn8UC9u%2BaFUqJ3kOORHwReC98QIO%2BvZ4b7gz8Jqyxlj3xdzLarAYNZzOvtt%2BrK8dI2hPMWB4zWWRYUwf1axxIv6t1ZMO06IZz871jSZOC%2FiAXhpfT6L1UIf7qLpQGX8AWKwOVwSCc%2FbdVAlJDZKzSAps%2F7tZmTpLxTyJMupDkkgcHfvWrLRywDN4KiD1cAExzWQI8VY2%2Bk%2FXTWLohChwkp3NBUaPAgT8W0bPJBY9Jn8egBGGxxQnomlSn0hoZn3AqtUfrnzmEfu%2FAjAh0mRC4ycP97B8m9lDAw6%2FXfW8rZdtWc5wY1p61mlaBub0XK9VwpnRHzN%2BUkoLtRwtkeRQfOSU6o2xAfDF90Tpn%2FDEt5fQggEgDeY1VnaK4itp%2BmncKgXtEfM7Q%3D%3D--rcTxWkVZ4NflFVg6--lLKibSIfev7V5OP49hOWOQ%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p1_2}},\"game_id\":{{id_game}},\"x\":2,\"y\":1,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_4",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "20a8127f-ae26-4128-849a-00bf03580004",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "3bca3656-ef3e-4fed-8eb4-1a584d4b6749",
+						"exec": [
+							"pm.test(\"Move_4 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p2}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=4fPzIx1CLCQys1YHK%2BogGqxlQAUNwAw%2BF9LynZKKA9BqBIeiH502q%2FfUqZNAxDeFGfRk1DIQn4pOzr8S4go9BBQBwRT8SqbUQS9OMOZELhzGsNk4hhh47uNP0ezaD%2BGoKD76lMpZ60e8%2BGl3gzkxTGZx6SE2vls%2BFchHiI%2FsO6kKs4ipQN%2BMobKg%2FM2QeajjBotsy2diG2FCyyj3n%2FIc3k%2Bd57MQf9fdnxna1wuUj1ORgamMTXdpFCdiDlCEklgREetWW4qT6bZ8BxmyigJm4KUCq4XkYRO9zSunIhZWJ8pn%2BgpyGYbih0xFAA97UhmnE6%2F7HLrU0hUahr0dzvtq5rbfJ98zcU2i%2BqNUZITz0oBzhnYqcs68URKxEqcJNAXgvBwMtj4hsYDY1QYUBMMR3Ba3%2Fideo14qEWqTdSsVryZ%2BTrZ5tAatAMSHHuHKxwpH4UUM4j7ngcx9WbxVuE1N2jRNZIu%2FRVtXn%2FHm5dlrvwrbfJU8QR1tr2OAzx7g%2FchXSM5BiIMW6UDGRxL%2BxqgHBD6K1UBn1xJ%2Fs8SfTTrqbXSA%2F63QEg%3D%3D--1NAaZIQTYYrsvhxX--nrJ245HQBU%2Bcey%2BXCC2GAA%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p2_2}},\"game_id\":{{id_game}},\"x\":2,\"y\":2,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_5",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ac2e5b0f-257a-4312-a686-bfe64eaa8270",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ea76f3e-473d-4496-8e70-00ced1c0c8dd",
+						"exec": [
+							"pm.test(\"Move_5 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=ecCaN3V8SSnjcKJ41sJ%2BFqSF%2B%2Bq9Qj%2FmcPi16RXCfGtYjAMTgjCnwkGN49haChJBaclRaC0gNC5%2F2rDg9W3ftscQHvOXbMihyIuOD%2BiUqASM%2F8HlrxPysCRFaRdb4nvl3DF731SjI302F5La%2B%2FCJKkYDz%2F%2FAEiJ43t9WIRQxX8kM02%2BG6ukAe7BvpDfqeNy34ndOODNkxq571LpN9sjgSEp%2F8DNZmq4MB4cOwrWLe6VDa7K6Ch8Gwq8CF400HWjMfmn5k9H2G1IsNYlQKq6l8YRetAH6j1LAz9T8%2BlMqZ0UCSD8DQhCMU%2FUghv%2FqYpuItzwi8qcBgAuhqvQROEP%2BkdbI2rPV9eIXvswH3d5NVRiaLvquTGVCGs53lQfgqJ5tVPnEmG5L7LsAj7CSnLgjZRj3XAFCIXMkZHinpgVchUqDjsgvmluTxUUon5IYlJkgbhtUlQ2VFPqPGYJgK9F7NBIdb6qtHQHlFY3MfhgGEDbSjLTNOWrKizF3sDQtwxFtV2njRZzsfXPl4paVv0YgqVzak9aJ6fA%2FmZQckGwOsBTOnZfGAQ%3D%3D--QxUTPjVxug%2FZCgBO--i3RKJvSz6vxAqnWEV5NhAQ%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p2_3}},\"game_id\":{{id_game}},\"x\":3,\"y\":1,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_6",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "4cc5ebb9-f75f-49e6-86a5-ed130f646fc9",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "64016134-07f3-475d-a8a3-ff08fc662433",
+						"exec": [
+							"pm.test(\"Move_6 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p2}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=ezZqiR2bBn5CZxTv7rAm2n%2F11mPYSuySGwIc1pCINHRFu%2F%2FoVfghXWi27rH0lZkRJycHEULCpPeaAoVH1SAgMRcmdi5gL7rl92AHB891nIA%2BzdC9b9WPkB0SCWQszQQ79XAPWQ01l1ycG5Jhs711IwvHDTmx1Ml8zvaP9DcJmZMtYEdmt%2Fpy4R2ZoPwMQtSkn7EA9szDjHML1y%2BC0xdLD8KmV8d%2BHIBNgagWQZiKVA7wNTH2ZUN6od6NlLrQY8F8KJ1P3TFUn%2FSOD9YrgP40%2FuvmBN3TBt8pE6vGfDUsVmWBV%2Bh%2Fyag0LRgrfINewFEXXP5l1TxZagiIodQ9uBaTXNMFqIzcTTruRK6wA4QoodpxCzdP7aPevowzMlwXYjsXSIriK21Uv4gU1aANAA%2Bm9r5pQlSKZbb%2BIwXNPADYKKcYtYyoQs33lKB0%2FYNX2mR%2FzxCOnI%2Fo4ZMidcS%2FsBmkFSeyi%2Bhv6BYEHuv3Za550MUPVvO%2FiDi5lXAtcKmnT7E8cnaiWTOtgNnRfzy3qNnrlkKJl0yMDlMxl0l4UtsqXqUVVxOfdA%3D%3D--f4gXexYl7cxneP0o--HXI1GVg6PHJdrbyNHZPPhA%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p1_3}},\"game_id\":{{id_game}},\"x\":3,\"y\":2,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_7",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f0113dd1-9dde-47ca-bdfc-67f60d693e4f",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "d15fe25d-61bf-47ee-8245-146a684f9025",
+						"exec": [
+							"pm.test(\"Move_7 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=03zn8%2F1GUMaQvLJAQUeRoPENBscov%2FUKwxGm2QPJNI5RU6RdkXIBSq1E9bPaSvghGVMSuXD42TT71XQd7%2Fp6pqQX%2FAGfmfLe5s1n6EnS7FhY7dgqcrfuU2VMFBFDLtieqAS9fqEBsZnDPyzCgT%2BMD4PsI9yM2JmsN8nhowUgqVXcmCLeXplq9sXuu0FdeSt2x7hpmkgqb5JWM0kZZ4iLgwbvsjm5UJJkJejN2mLThBpiCJJitYIjl8ZdwGSIc2ulmaVmfQKmlA36Eegt0tPGjkLoaM8rkAZ1DSbitdv1UrTfeEasdmsIRnxjPg%2B0%2BfaYVr%2Bx%2F%2FOV5xCR1eBAG5aFL0SGxdpYlPSEtHefzr4SQvnPpcWHrJFx0dq6yWzSy3A2zt1A25tDhudQITS7%2F%2Frcq%2BsY3m1bjDvO1OGpD3th2qxz%2FFsFjQDu5qNsiUL3g9jVvV0u9ru0n1OkM2%2FMHoxI6ifLi9HdGY7ZhMhLIwFZhH9JVXG%2BFyPkFglul75aDtJDO3d%2BXBWzgOzp99WVW%2FRKVuU7D5xIm1mgJNvlgT9TT21qaBvCsQ%3D%3D--8Yjm%2BYHsm1%2FlBBHj--Wr860%2BoYVzs4DhYkkYswsw%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p1_4}},\"game_id\":{{id_game}},\"x\":4,\"y\":1,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_8",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6524cdac-97d8-431c-b440-3140a973c4d6",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "f83bcf2e-4303-4bff-9661-21610bb93452",
+						"exec": [
+							"pm.test(\"Move_8 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p2}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=Zn9NLfl2KLOa28ko2L1PwxaIxdkGMAY5IPrl2LfRIaar5voti5tnnBPZ3kUIPLbfGtmF3jyzDxpxV97vez1aFHBIFA6HeIwF2D7DzIyuVPT%2FmLMqReZEyfTpHRRr9L6MilDyOK6eLlCiCRHiWr9veJDLHanSfT63hO0vMRqz%2FYALvUTUVUFF8lvzbwxlVXc4eF5vq38M%2FN05PnkMq%2BprrB0tJ2LGHxELawmmhf5mnTZmYLxBIBswvLWnbdfrYZQ6KEeTExyNh62K3%2BhdZ8G1Wu9fVRKN4MahsHksIamrqnzwH828ORed6DKWSuurH6efo4V%2FdeecXe9HbXiSIM7XWBy%2B07XkQpn9gNlhC6fC8tnpWRFPSeoVC1alUk2xB8vkXkni2OQm%2FBZcd%2BbH6yVCuqI5au2Mw42es0JYabaUHvtDcR9a%2BNNO7ZSo1ae%2B0Hc0W6nAGHhllErp4Fef7dZKCAAqw6ixyLrZToRha4%2BLUHhTYjMo8a2iDKSH%2BDoA23Kcc8euxvFsR8Mu1mtXyR02pCwCY5nTG%2Fuq5YFAdWpjTePjSzQZuA%3D%3D--2lMSV8mDHSOqlh0l--hWlyZdslsu3nY%2BjSRfJYKw%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p2_4}},\"game_id\":{{id_game}},\"x\":4,\"y\":2,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "make_step_9",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "490e494a-dd74-427f-97a5-f819bd8b40b9",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "432d9e5b-16d8-4fd7-ad8b-09986c930ebc",
+						"exec": [
+							"pm.test(\"Move_9 was succeed\", function () {\r",
+							"    pm.response.to.have.status(204);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.183 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json;charset=UTF-8"
+					},
+					{
+						"key": "Origin",
+						"value": "https://xoxotsf.herokuapp.com"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=5GioxYoHV3fwSaTEnwmd08zqibKhY%2BB97CsLJ429iT3nsn8bqsYfjMmz7maaeY2PFm%2FDsMWgelF7jtEyXmCOjhpmoUb7mF0mAf%2BT%2BGPCdHrAj%2F1jAIPgjipYdUmVXrPIP8ZQ0wNcdh9CMwnb1HXNCQ1g5Ew%2FpMuj72kjy6FvYAOKGO9DOG0hWlHxsInqd9LhoLzKLZr8VxB%2BXoF4ycytD%2F38nDCZx9Evt7IccSnxV%2Bi0rAALruSPZDuOuJMZ814hZI%2B%2BLBEQ4C2OoxcVGTN5163WZ9eqyJxyrJ3resOwkCATlVaNTUozcr3%2F3s39S%2FqiObzdFH9Oug1YPVFK0nnqgKpcQT2DjSBe5%2BW0e9fCsVJMltszYdWMWtcm1kej1LEsjl770fWO1cLiVpfl0vnJRV06W%2F6%2F3dlL%2BLYscBO2bHA%2BqvzKHuhqeNLMlXRBA1GOLMmoIRSnP4laZcO6EWXWyvZ0%2FY46YOqnxv5nuGo%2FDLMQvEvSnhp5JyI%2FXhnIVrHopFNHBM03yWfxV%2FMZSs6hvqtNHnNyNT4mCy8h3KJzq6mTqNZo4A%3D%3D--QP2rLCBB8JsyUU8%2B--%2BNPNbcO9b0OpPiYZfuE76w%3D%3D",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"cell\":{\"id\":{{make_step_p1_5}},\"game_id\":{{id_game}},\"x\":5,\"y\":1,\"kind\":null,\"created_at\":\"\",\"updated_at\":\"\"}}"
+				},
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}/make_step",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}",
+						"make_step"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check current game who won",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "25d8a1ac-60d4-4669-a66f-a7c433f25d46",
+						"exec": [
+							"let jsonData = pm.response.json();\r",
+							"\r",
+							"pm.environment.set(\"variable_key\", \"variable_value\");\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Player1 won this game\", function () {\r",
+							"    pm.expect(jsonData.winner.user.id).to.eql(18);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Connection",
+						"value": "keep-alive"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+					},
+					{
+						"key": "X-CSRF-Token",
+						"value": "{{csrf-token_p1}}"
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "Referer",
+						"value": "https://xoxotsf.herokuapp.com/"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en"
+					},
+					{
+						"key": "Cookie",
+						"value": "_nerve_ai_session=3LrAam%2BH3gx0EFmDWXs891urcPcTP5a0Ip4A7vsY%2BHCssbJPIRDFU9WDRXNMmjT8FqnKrnEPO65KyYnJu7CFOygcR6PWjZf8oA3V9h%2FJw6rqdsvbMUSAmX0II5biFc2DQmMN%2B0FG2kkcYA8IsMjpLjeST5t9UAcBQ4MujshrUkUllM6MI28h7B0NNeZDdoyxOiKcqNneXBwn6PO8rRtyQKN0Ey6o89UZDbUWZqHwpJOtgTv35vKx8Rb8Vp8fuT5p73dmA3iFlb8Y8BVjWAjgo3I%2B%2FpwivzkqAgoiXMHKOwvaOfFo9r3lO3Aj%2BFx7bZjZuHdz7EXeal0DdLiLPGI6kJG83AnokSymEjPFdAxYhrQCMT9kU5hakjZKmf94vJ5vMnLB7rWm7NEEFj8Rw3a3fyz2AOD9%2BTht8tRvIYOz2dtYleVsZ5cmooqEQUKJLw5BiCpb%2F8o9V%2Bi%2Bye%2Bm6vNHN%2BROBAo1a90TmTwf3oFikuB0U0Xy3OLYA%2BN3K7RPIZOqnMUZtJbuIwWt6vPb%2FvqSNActfyzd1PybedxEPkbr%2FLFhA47EFw%3D%3D--JMrEP63ALEAFMz03--0Z0fYUqJePo94uKHtDD%2F8Q%3D%3D"
+					},
+					{
+						"key": "If-None-Match",
+						"value": "W/\"82fffa2ec5c33d62181106da50215a54\""
+					}
+				],
+				"url": {
+					"raw": "https://xoxotsf.herokuapp.com/games/{{id_game}}",
+					"protocol": "https",
+					"host": [
+						"xoxotsf",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"games",
+						"{{id_game}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

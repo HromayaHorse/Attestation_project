@@ -1,0 +1,1290 @@
+{
+	"info": {
+		"_postman_id": "40766ed4-811c-4b68-b148-e766a93803fb",
+		"name": "Attestation project x/o_Api schema",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api schema",
+			"item": [
+				{
+					"name": "HTML/CSS/JS",
+					"item": [
+						{
+							"name": "https://xoxotsf.herokuapp.com/",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Upgrade-Insecure-Requests",
+										"value": "1"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "none"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "navigate"
+									},
+									{
+										"key": "Sec-Fetch-User",
+										"value": "?1"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "document"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/users/sign_in",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Upgrade-Insecure-Requests",
+										"value": "1"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "none"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "navigate"
+									},
+									{
+										"key": "Sec-Fetch-User",
+										"value": "?1"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "document"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=FbKxSXm34Qnte7RELYbCHAI39h1rATMpWW7nhcBlEF6N38v6VIPgKFrwRaC2q9c9krRA%2BFhodid4n7t3JBQbXFeSnmHBCzWL23P6sMkERpMB5DaCGkLYRdb0vAxYCezzq7uBAO4PR3aQy2IOUc02p7WdtnamqK0m00yWDtMfgLof0yP1g9uKegQPK7EmZke2sa4fdKXMD49X0WHbHSsZrVRCEhSR13cWjSa8J2rAK1fEtbiD7jB%2BaZouocCTI21Iu%2F3FSakFUyUs8KRbn6o9Y92ZXKxjrgNrQ3mW8BwSCGM99JoGVr9G%2BtyrVPX49ZqMFwMOP7dtqmsjMWeqUfP%2FVa4zD3XfGALmMw9QcgXD11YBFrkbu629lEh1AjILp6uwE0jwimWbBi2FQkQ5Dikh4n5usGUWbjv9tthznz0nMLGQ1t1wqyS%2BUq4YQsYeQOUvkshJYVr%2BIR9tnAZ2yb8QH4KD8BqlcFb5NA%3D%3D--NAGrmjaMRTZsE22F--riVAMSh3O%2Bijn%2BWx2ycXAg%3D%3D",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/users/sign_in",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"users",
+										"sign_in"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/assets/application-3e5f503877a819cdc2500d7f62bbcf0be607cf365c26e83504785abc9222663b.css",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "text/css,*/*;q=0.1"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "no-cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "style"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/users/sign_in"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=ZeMhBIpXaHOOL%2B07RqcZ4fwVx45wlhHglAUA5M0WL2JEnyhsoQnKx1PFsjIuMHk2XQe8WImv8uPKPofcZAqU7XXu84A17E%2B5LFc8680U7zb2ePKq3o%2FVb%2Fq5gGbU9v%2Bwlk%2BaW%2Bp01kUGABmNazGmW3LejsE0%2FbZnOdNGe36IaV%2FSlCKDTGuhtiHHqUGSLqsn8I4rcO%2B9EMbdDBNt0kcvirBybL5yLCwvD9B4OM2GuKkm2MUsc4%2BsIETpFb4V1Ozcv4OQh7pfLz61uDc%2BGnIoUhw4nojjY8CkwB96BJsNa%2FYtagPtOPIYYh0ECS6xauTdKeP7pV%2FCloQLey9gmIjqWj8za7EfQ1JLd4mynO3Duhj0zoEkPz0XsyBiwJWPkPTmu%2Btj9sMgfqKNZX%2BSGAdo%2FVeqVKliYfpgnjxSmDkZe%2BnN0IE2rEZh6kgkiIf%2BM5b7EdIiCjvYlQUYIl5K5OnRoukCvksB6kew%2Bq1M%2ByY0rtoVCp6PPMIMi7lweeaBqiDn5Dt14j8Zb%2Bw2G4fsmlw5MjzXeavWAwkwV15306ZCfUksAEi89v%2BM6mzXpUCYDFRS5%2FcTXJIVAU66--kKhfmDL9%2FhlYCrhw--xmwktdn4Fm8nGU%2F23A%2FQYg%3D%3D"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/assets/application-3e5f503877a819cdc2500d7f62bbcf0be607cf365c26e83504785abc9222663b.css",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"assets",
+										"application-3e5f503877a819cdc2500d7f62bbcf0be607cf365c26e83504785abc9222663b.css"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/packs/js/application-0d4924d9aa3976082729.js",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "no-cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "script"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/users/sign_in"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=ZeMhBIpXaHOOL%2B07RqcZ4fwVx45wlhHglAUA5M0WL2JEnyhsoQnKx1PFsjIuMHk2XQe8WImv8uPKPofcZAqU7XXu84A17E%2B5LFc8680U7zb2ePKq3o%2FVb%2Fq5gGbU9v%2Bwlk%2BaW%2Bp01kUGABmNazGmW3LejsE0%2FbZnOdNGe36IaV%2FSlCKDTGuhtiHHqUGSLqsn8I4rcO%2B9EMbdDBNt0kcvirBybL5yLCwvD9B4OM2GuKkm2MUsc4%2BsIETpFb4V1Ozcv4OQh7pfLz61uDc%2BGnIoUhw4nojjY8CkwB96BJsNa%2FYtagPtOPIYYh0ECS6xauTdKeP7pV%2FCloQLey9gmIjqWj8za7EfQ1JLd4mynO3Duhj0zoEkPz0XsyBiwJWPkPTmu%2Btj9sMgfqKNZX%2BSGAdo%2FVeqVKliYfpgnjxSmDkZe%2BnN0IE2rEZh6kgkiIf%2BM5b7EdIiCjvYlQUYIl5K5OnRoukCvksB6kew%2Bq1M%2ByY0rtoVCp6PPMIMi7lweeaBqiDn5Dt14j8Zb%2Bw2G4fsmlw5MjzXeavWAwkwV15306ZCfUksAEi89v%2BM6mzXpUCYDFRS5%2FcTXJIVAU66--kKhfmDL9%2FhlYCrhw--xmwktdn4Fm8nGU%2F23A%2FQYg%3D%3D"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/packs/js/application-0d4924d9aa3976082729.js",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"packs",
+										"js",
+										"application-0d4924d9aa3976082729.js"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/favicon.ico",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "no-cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "image"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/users/sign_in"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=ZeMhBIpXaHOOL%2B07RqcZ4fwVx45wlhHglAUA5M0WL2JEnyhsoQnKx1PFsjIuMHk2XQe8WImv8uPKPofcZAqU7XXu84A17E%2B5LFc8680U7zb2ePKq3o%2FVb%2Fq5gGbU9v%2Bwlk%2BaW%2Bp01kUGABmNazGmW3LejsE0%2FbZnOdNGe36IaV%2FSlCKDTGuhtiHHqUGSLqsn8I4rcO%2B9EMbdDBNt0kcvirBybL5yLCwvD9B4OM2GuKkm2MUsc4%2BsIETpFb4V1Ozcv4OQh7pfLz61uDc%2BGnIoUhw4nojjY8CkwB96BJsNa%2FYtagPtOPIYYh0ECS6xauTdKeP7pV%2FCloQLey9gmIjqWj8za7EfQ1JLd4mynO3Duhj0zoEkPz0XsyBiwJWPkPTmu%2Btj9sMgfqKNZX%2BSGAdo%2FVeqVKliYfpgnjxSmDkZe%2BnN0IE2rEZh6kgkiIf%2BM5b7EdIiCjvYlQUYIl5K5OnRoukCvksB6kew%2Bq1M%2ByY0rtoVCp6PPMIMi7lweeaBqiDn5Dt14j8Zb%2Bw2G4fsmlw5MjzXeavWAwkwV15306ZCfUksAEi89v%2BM6mzXpUCYDFRS5%2FcTXJIVAU66--kKhfmDL9%2FhlYCrhw--xmwktdn4Fm8nGU%2F23A%2FQYg%3D%3D"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/favicon.ico",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"favicon.ico"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/packs/css/main-cfd3a465.css",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "text/css,*/*;q=0.1"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "no-cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "style"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ilcxc3hPRjBzSWlReVlTUXhNaVJFWlVNM1JWWjVPVTVDYWsxck9HMW5ZV1ZMTG1kbElpd2lNVFl3TkRReE5UZzFPQzR4TmpjNU9UYzRJbDA9IiwiZXhwIjoiMjAyMC0xMS0xN1QxNTowNDoxOC4xNjhaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX3VzZXJfdG9rZW4ifX0%3D--4f9eb6dca7f36691e6541ef48764a7d6dbe74ed7; _nerve_ai_session=iUXSjGA4T2JG6q1z1eXJGWyiWHkp%2BK9UwDZ8nPCMhjBC9B5pDRWanbnwvXJl6HQKjXGwFtY%2F3P0grs17jdwJ%2BLYq7pKZQfJwz01v7LzBxoHnqb1RuA%2FfIxQLhqWJXcVQaYBI%2FBIpGqbOvw3TudJNwr9KL2hUcOztT8Eyqu9gAI4NCEwvWf%2F0e4X16V3B0ZWGOaKUYq5cejjf6kg%2BF2ZR7n57T2ADlcvtlthj8kvFdcFmFKHsqQ6lNPDjkHcmraJybslXcrRUngggcHuCw86b%2F%2F9x5%2BdcrTXK3uRqBqtJ5vsrRn%2FW3JxgiGGjDc%2B6AfJuNbseVRuJAK8fP8jvlu5rug0KCQNLW0NlpIW9z%2Fofqk71Xr4aH%2FlNWtsGWyrCWAQy3sIlv6pvn8t10uca6XYkvh1DykELhIsvqOPRam7%2FnDCJt4JDtncCOOyW7AKe%2B1LLkSHAJkPFjSY8ekRz%2Fz13rZ9RgW6MqkCprgkCKErcLi7eZ846fg0J03%2F2TJCRpuBkLUylanoG9w2fykP%2FM9xFCMGgCgHOSbrQA0b789%2BI%2FP2otrAgVg%3D%3D--scpmAHYeyJJa3JGD--GzsJE%2Bo8AsxR3JUsOa0Yjg%3D%3D"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/packs/css/main-cfd3a465.css",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"packs",
+										"css",
+										"main-cfd3a465.css"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/packs/js/main-80bcf86c9b45d3e79526.js",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "no-cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "script"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ilcxc3hPRjBzSWlReVlTUXhNaVJFWlVNM1JWWjVPVTVDYWsxck9HMW5ZV1ZMTG1kbElpd2lNVFl3TkRReE5UZzFPQzR4TmpjNU9UYzRJbDA9IiwiZXhwIjoiMjAyMC0xMS0xN1QxNTowNDoxOC4xNjhaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX3VzZXJfdG9rZW4ifX0%3D--4f9eb6dca7f36691e6541ef48764a7d6dbe74ed7; _nerve_ai_session=iUXSjGA4T2JG6q1z1eXJGWyiWHkp%2BK9UwDZ8nPCMhjBC9B5pDRWanbnwvXJl6HQKjXGwFtY%2F3P0grs17jdwJ%2BLYq7pKZQfJwz01v7LzBxoHnqb1RuA%2FfIxQLhqWJXcVQaYBI%2FBIpGqbOvw3TudJNwr9KL2hUcOztT8Eyqu9gAI4NCEwvWf%2F0e4X16V3B0ZWGOaKUYq5cejjf6kg%2BF2ZR7n57T2ADlcvtlthj8kvFdcFmFKHsqQ6lNPDjkHcmraJybslXcrRUngggcHuCw86b%2F%2F9x5%2BdcrTXK3uRqBqtJ5vsrRn%2FW3JxgiGGjDc%2B6AfJuNbseVRuJAK8fP8jvlu5rug0KCQNLW0NlpIW9z%2Fofqk71Xr4aH%2FlNWtsGWyrCWAQy3sIlv6pvn8t10uca6XYkvh1DykELhIsvqOPRam7%2FnDCJt4JDtncCOOyW7AKe%2B1LLkSHAJkPFjSY8ekRz%2Fz13rZ9RgW6MqkCprgkCKErcLi7eZ846fg0J03%2F2TJCRpuBkLUylanoG9w2fykP%2FM9xFCMGgCgHOSbrQA0b789%2BI%2FP2otrAgVg%3D%3D--scpmAHYeyJJa3JGD--GzsJE%2Bo8AsxR3JUsOa0Yjg%3D%3D"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/packs/js/main-80bcf86c9b45d3e79526.js",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"packs",
+										"js",
+										"main-80bcf86c9b45d3e79526.js"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/users/sign_up",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Accept",
+										"value": "text/html, application/xhtml+xml"
+									},
+									{
+										"key": "Turbolinks-Referrer",
+										"value": "https://xoxotsf.herokuapp.com/users/sign_in"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "empty"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/users/sign_in"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=vyVI5uv1%2BpKwlZqTt0kYdUoy3z9ItZn8LH8hgPs5iCwCVkoUQtTbrgKLOf1zZ9Ufd5FPWBHj9UmsTiFUfUjQYS%2FwnvLzoss%2F1PAXwmUTzhKomioCc66Te7IWetbnPKkhOcEHQM27IYUg7RMN4XSqFewuBVJfeGDgDZEs1DyEO8aXWz55P8HpW%2BK4VP%2FyIJLNvd%2F0poZnwwERR%2FSGDlFCjlKr40akGuatzWOR4yZv%2BLPCjq7FG5lTx3Rx8LG4W01rpofZrcj5xIEczqtXAaiYcZlIyku8D3mLk5voVaq30%2BXhUVfsRiXyHAi1fK7MaAecvBmEbN8x2B4PzzwPMZXE3c6mnXgp%2BdLA%2BDdB50%2FJmSciNCGXLolph%2BoIj9UXuiWLL9FxUORRpJhQsS3jUGZcKI3YOIu0P2fvcmBDxr1m38lDZSm05pqx8tUEugK%2F2fa1ErTos6opxhxpdqyhngXhtojs5y66E%2BPO9aTwKn2shm1Jy3bS2sH0JRu0kJO0Gc%2Bdzgvrg%2F3AhUOuwNfGBLBbE1w8E4ecFjXRUoVaWGJMqbSiJK%2FMQJBfMejsj%2F8w%2BBfq1MoK1GiJtEEg--pMKxA5oaoyLtrfFx--ZYSnRKJh9WMbK3EOUzTwaA%3D%3D"
+									},
+									{
+										"key": "If-None-Match",
+										"value": "W/\"dc956b8a3e674c917fc8f94d3809a86b\""
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/users/sign_up",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"users",
+										"sign_up"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/users",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Cache-Control",
+										"value": "max-age=0"
+									},
+									{
+										"key": "Upgrade-Insecure-Requests",
+										"value": "1"
+									},
+									{
+										"key": "Origin",
+										"value": "https://xoxotsf.herokuapp.com"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "navigate"
+									},
+									{
+										"key": "Sec-Fetch-User",
+										"value": "?1"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "document"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/users/sign_up"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=iSk4GWzZ%2Fnz4TcZah4OkyFHCQ2NCm9h4A6MNP4DEyz%2B4yUxix17P52mPx0PVwXKg0rr7YFQyvnIrdCpO84ldqtJY7ZPjdsCdINfmtfLvPbbPQPe4Wkc4DL6JeAwc%2FjQ64F3wkoNZdyg5LGoAENzOnuYelvG64AQ6tGl720PEA4RFPb26Wqp6hIQy%2FpCNcUxry221lHzFr1WgLjsZlztNqcVJq4H7s0%2Fopbt38VlIQJ4KkawinOzr0kvMbyeCp0gkuVRNI0z86hzlj%2BgFb9DtySEdDCSg8VVL2Db%2Fl0rvaSOI6MACKWFEJ%2BkBl%2FbTB1tZ4AvQVXf%2BKoApvlr%2FX0zkwL4bzTYghkalG5vH4ok9WoBFhE1C7z7jQK%2BfV7ieNb19LyG2duPw%2F4vfPnFW3Wbb2w7lzNQGJZauv3JfrYus6%2F2OUVXafC6PCfLXViOMcJB1vi5ISKcC8asoNJMbDM02t86%2B%2Bkb7t4od4mr%2Fx1Z9pwcbycIcAbDZ6%2BoEEYKF5m7NpGf0m%2B5AY4HfdApi7UD3ZhGabr1ZrQf85hcIr3MZMyJ5RHuPqwO8r2LYdnRfuX%2Feeo5ZN5fYNp0R--%2FQkart5C%2F0PH0v72--cRXX5eyYCEAWyua0xeokOQ%3D%3D"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "authenticity_token",
+											"value": "zKJXR7zYZIHSQzPpOZ6HKEphqenTjeGWc2Q8NMUoIraFIvBP/QQzHz1P6TrjVtlq2gz4sNMGw16g0Z3d5uSTjg==",
+											"type": "text"
+										},
+										{
+											"key": "user[email]",
+											"value": "rosadav990@jah8.com",
+											"type": "text"
+										},
+										{
+											"key": "user[password]",
+											"value": "test007007",
+											"type": "text"
+										},
+										{
+											"key": "user[password_confirmation]",
+											"value": "test007007",
+											"type": "text"
+										},
+										{
+											"key": "commit",
+											"value": "Зарегистрироваться",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/users",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Referer",
+										"value": ""
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									}
+								],
+								"url": {
+									"raw": "chrome-extension://gppongmhjkpfnbhagpmjfkannfbllamg/js/inject.js",
+									"protocol": "chrome-extension",
+									"host": [
+										"gppongmhjkpfnbhagpmjfkannfbllamg"
+									],
+									"path": [
+										"js",
+										"inject.js"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Referer",
+										"value": ""
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									}
+								],
+								"url": {
+									"raw": "chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js",
+									"protocol": "chrome-extension",
+									"host": [
+										"mooikfkahbdckldjjndioackbalphokd"
+									],
+									"path": [
+										"assets",
+										"prompt.js"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/users/password/new",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Cache-Control",
+										"value": "max-age=0"
+									},
+									{
+										"key": "Upgrade-Insecure-Requests",
+										"value": "1"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "none"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "navigate"
+									},
+									{
+										"key": "Sec-Fetch-User",
+										"value": "?1"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "document"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=V6hieXINHpYd3hQr%2FO8BceaF4oQ%2FUp0TuTdCwx1CLWgWqVr%2BAvbSiBl0Sh%2FQggwPOrUKcdbvc8bhy%2FUOkL0aFvNEhjj%2FvvZ3szMg1G5%2FQjpgw1gTKmIi3zRPpeoTujTXzb%2FFBDIOVS7ITKfR7kuDHPPXo8TdId9M9sfCphnHR%2FIxQgzelfWL%2BXneMDX%2F1IB75FTlkDPbeECE5ERb5nq70dBGnZ9mO7gQlMm4dgijJZKvf8jrp2SrP4GwkQ%2Fjq1RPPVRh9NX56jG%2By1QobVRLaxhZbsXQ%2BsaML3gEe3m2A094g5CoQQRjHBs7gWwfIxCOQ3JYMOHvA18pChXpv5TQ8vRRfgTXzM6qTdlq7lhkGP0F7ugGq2pujpx4mOZ18OoG0mJIBQ%2Fzt99w1f4%2FyaNHe3wzMTMd5LqEEe9WslA0dDnKwotzyUFr%2FOePASaZc1WtPbL2iHdRXBwPegoeEo9Czd1lqsdLdoesVK0ewiOn3XpZ9UVQN7Js7btmyxlfHmtW1Xwu5yj6RL7FqvsVXn2uNA2ZL2l3LaMUDuqsqIKYI%2Ft7go3atzF6VpzG9HmsUopR3kVH%2B6pNaOOI--IZ8ZVFbm%2F7mH3XYN--oGOEOYP%2B1qB%2Fy6euNy36ZQ%3D%3D"
+									},
+									{
+										"key": "If-None-Match",
+										"value": "W/\"dccbf0d0993688317cdf9feef14778aa\""
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/users/password/new",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"users",
+										"password",
+										"new"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "https://xoxotsf.herokuapp.com/users/password",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Cache-Control",
+										"value": "max-age=0"
+									},
+									{
+										"key": "Upgrade-Insecure-Requests",
+										"value": "1"
+									},
+									{
+										"key": "Origin",
+										"value": "https://xoxotsf.herokuapp.com"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "navigate"
+									},
+									{
+										"key": "Sec-Fetch-User",
+										"value": "?1"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "document"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/users/password/new"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en,en-US;q=0.9,ru;q=0.8,ru-RU;q=0.7"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=SFsWF2ql8cn1y6UpVpkxK%2Bxc90OXFUJhJRVDiWjpgj%2Fd1A21dWildg%2Fo5a9Ik8s%2FcvDl%2Bd4We%2Fvexqer8pqDsedTgwP1S6ytKMnIFBGYOKK9jeEBpUW3mvgvcOZXXXHFlSmp%2FV6brU6H1MfwvK%2FG%2FDC2tC25qhcLv2kQ48c8HllXWdaXldHhntC002%2F4xTFB9GxOklr5Cu7kTYYMKCT0SuuQWci1ce2NKIyKcwgFvZ9wZIVsX0V5bxgui3QWZ6aCEjcSqNLY9RWwZHyef1%2F3lKglSYpJTywRPj5Esw1LiwkUeiZPTV9lSdjJgPpcZPONdOjz89GDF2qLB5ZrehCaKADBeY8CCyJfTDVjD5RJvHhsJTtXoikCfBNDa%2BsUQ0q2H%2BJ99B3K2WelalTjTr5dpo%2BrrQdIoIrwvHAxodE8kAWJOgbPDsA6L0L7rAlAfYTZxpzMo3TiXxvDrtX7ajMn%2B0cJxyFlX2TwbNZ9JVohHwh4kYN%2BMIiXqFv49czXCvZJBd6vuTW6jHwBlW5gXKtEO7ZDaPx7WkplAl21W9%2FNVPBAUZvRMG04KYjIqrrRUEj5FITHHOsTEnZA--zD7AvWRYm%2BDrXD0A--QxkBvXeAppRY0pzP3iTwDQ%3D%3D"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "authenticity_token",
+											"value": "XJkeYMpxT50DxwFlRlUFbPRdCxgt55F/lvor/Bvj0kiLKbNslEgXYaZrBz2AP5rBYzzJh8LNBcEZ6VafbUokdQ==",
+											"type": "text"
+										},
+										{
+											"key": "user[email]",
+											"value": "egorhejfec@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "commit",
+											"value": "Прислать+инструкции+по+сбросу+пароля",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/users/password",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"users",
+										"password"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "cdbbe3dd-d6dc-4f93-9eef-ea144ec11d9a",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "65d6edad-2f09-44af-9153-335ab589fb7f",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "Methods",
+					"item": [
+						{
+							"name": "sign_in",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Cache-Control",
+										"value": "max-age=0"
+									},
+									{
+										"key": "Upgrade-Insecure-Requests",
+										"value": "1"
+									},
+									{
+										"key": "Origin",
+										"value": "https://xoxotsf.herokuapp.com"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Accept",
+										"value": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "navigate"
+									},
+									{
+										"key": "Sec-Fetch-User",
+										"value": "?1"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "document"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/users/sign_in"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "_nerve_ai_session=ZeMhBIpXaHOOL%2B07RqcZ4fwVx45wlhHglAUA5M0WL2JEnyhsoQnKx1PFsjIuMHk2XQe8WImv8uPKPofcZAqU7XXu84A17E%2B5LFc8680U7zb2ePKq3o%2FVb%2Fq5gGbU9v%2Bwlk%2BaW%2Bp01kUGABmNazGmW3LejsE0%2FbZnOdNGe36IaV%2FSlCKDTGuhtiHHqUGSLqsn8I4rcO%2B9EMbdDBNt0kcvirBybL5yLCwvD9B4OM2GuKkm2MUsc4%2BsIETpFb4V1Ozcv4OQh7pfLz61uDc%2BGnIoUhw4nojjY8CkwB96BJsNa%2FYtagPtOPIYYh0ECS6xauTdKeP7pV%2FCloQLey9gmIjqWj8za7EfQ1JLd4mynO3Duhj0zoEkPz0XsyBiwJWPkPTmu%2Btj9sMgfqKNZX%2BSGAdo%2FVeqVKliYfpgnjxSmDkZe%2BnN0IE2rEZh6kgkiIf%2BM5b7EdIiCjvYlQUYIl5K5OnRoukCvksB6kew%2Bq1M%2ByY0rtoVCp6PPMIMi7lweeaBqiDn5Dt14j8Zb%2Bw2G4fsmlw5MjzXeavWAwkwV15306ZCfUksAEi89v%2BM6mzXpUCYDFRS5%2FcTXJIVAU66--kKhfmDL9%2FhlYCrhw--xmwktdn4Fm8nGU%2F23A%2FQYg%3D%3D"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "authenticity_token",
+											"value": "2yNdzltotwwyb0tbdTxXtrHFZyHlDWHmt7VgTePN67gJY2HkymyrcmW5l8GpbGhBQFMJ6Nh1afahbwN9kEVPPQ==",
+											"type": "text"
+										},
+										{
+											"key": "user[email]",
+											"value": "workcrazydog@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "user[password]",
+											"value": "test007007",
+											"type": "text"
+										},
+										{
+											"key": "user[remember_me]",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "user[remember_me]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "commit",
+											"value": "Войти",
+											"type": "text"
+										}
+									],
+									"options": {
+										"urlencoded": {}
+									}
+								},
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/users/sign_in",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"users",
+										"sign_in"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "games",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Content-Length",
+										"value": "0"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "UVHJ6tY9SXbrQwQzXtn948VPwggVWCkkivu/WtQRWc/UvMlqx6jAX+Tmkv31u5unSZ4jrLXWNEoC7zVPCSagwA=="
+									},
+									{
+										"key": "Origin",
+										"value": "https://xoxotsf.herokuapp.com"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "empty"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ilcxc3hPRjBzSWlReVlTUXhNaVJFWlVNM1JWWjVPVTVDYWsxck9HMW5ZV1ZMTG1kbElpd2lNVFl3TkRReE5UZzFPQzR4TmpjNU9UYzRJbDA9IiwiZXhwIjoiMjAyMC0xMS0xN1QxNTowNDoxOC4xNjhaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX3VzZXJfdG9rZW4ifX0%3D--4f9eb6dca7f36691e6541ef48764a7d6dbe74ed7; _nerve_ai_session=iUXSjGA4T2JG6q1z1eXJGWyiWHkp%2BK9UwDZ8nPCMhjBC9B5pDRWanbnwvXJl6HQKjXGwFtY%2F3P0grs17jdwJ%2BLYq7pKZQfJwz01v7LzBxoHnqb1RuA%2FfIxQLhqWJXcVQaYBI%2FBIpGqbOvw3TudJNwr9KL2hUcOztT8Eyqu9gAI4NCEwvWf%2F0e4X16V3B0ZWGOaKUYq5cejjf6kg%2BF2ZR7n57T2ADlcvtlthj8kvFdcFmFKHsqQ6lNPDjkHcmraJybslXcrRUngggcHuCw86b%2F%2F9x5%2BdcrTXK3uRqBqtJ5vsrRn%2FW3JxgiGGjDc%2B6AfJuNbseVRuJAK8fP8jvlu5rug0KCQNLW0NlpIW9z%2Fofqk71Xr4aH%2FlNWtsGWyrCWAQy3sIlv6pvn8t10uca6XYkvh1DykELhIsvqOPRam7%2FnDCJt4JDtncCOOyW7AKe%2B1LLkSHAJkPFjSY8ekRz%2Fz13rZ9RgW6MqkCprgkCKErcLi7eZ846fg0J03%2F2TJCRpuBkLUylanoG9w2fykP%2FM9xFCMGgCgHOSbrQA0b789%2BI%2FP2otrAgVg%3D%3D--scpmAHYeyJJa3JGD--GzsJE%2Bo8AsxR3JUsOa0Yjg%3D%3D"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/games",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"games"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "/games/54",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "UVHJ6tY9SXbrQwQzXtn948VPwggVWCkkivu/WtQRWc/UvMlqx6jAX+Tmkv31u5unSZ4jrLXWNEoC7zVPCSagwA=="
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "empty"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ilcxc3hPRjBzSWlReVlTUXhNaVJFWlVNM1JWWjVPVTVDYWsxck9HMW5ZV1ZMTG1kbElpd2lNVFl3TkRReE5UZzFPQzR4TmpjNU9UYzRJbDA9IiwiZXhwIjoiMjAyMC0xMS0xN1QxNTowNDoxOC4xNjhaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX3VzZXJfdG9rZW4ifX0%3D--4f9eb6dca7f36691e6541ef48764a7d6dbe74ed7; _nerve_ai_session=Qy19PLWDG9tVjoYlPd9O7iIxP53TDGkhVbRkvlXHD6WJLGdHRv7Nl9Tk5JiyqvbJYSkRYtyZpaeUcEr8%2FknEFJukHVC6TcNnQFc7Xn%2B9OH9di0Wf%2F6%2BpLPFOkx5HYXh4iMOr0M6m9PAKpdShTmGnuSe0iCwrrK8Sk0bNX55QTyYtpjOXW82wBvkE0Itq%2FbZBGnLTzt3MfEbok3jx4ztcNkj%2BWu99L6aSp2onCZAr0inR1GC31%2Fkwuq11iRHfIQMpN51P1MRC%2BwoU6PIkuiGBFbufdNPzOvePW5GL81iM4jcREXEyrTskywgcu45DbzsYRoY3ov8SXC4FzTkcMYPc4zUqssCCxMcGItQiJSe1HXZIFk%2FzjgbsUF0%2FZ1tfhoz5tAhW2Ee2VXsGxP37Nwk%2FWqJ7bRyFH1Zop3zEOWQEKlLJLvqXTCYZ%2BPLZrV7V8IA1LzGRPx8saFcqnU1AeG%2FSa0ZRy75ypvQ2k5nD7ktr7r7gn82Jrwl4DRclqi0qJi90VsJAsFllO1vRdInVhXHzUVAxrCPrSc%2BdCEBs7HAOIWgySbTS4g%3D%3D--q%2BNTX5y3x133dGBA--%2BOaApBAWU%2Bv%2Fy3L75CBmvA%3D%3D"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/games/54",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"games",
+										"54"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "current",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "UVHJ6tY9SXbrQwQzXtn948VPwggVWCkkivu/WtQRWc/UvMlqx6jAX+Tmkv31u5unSZ4jrLXWNEoC7zVPCSagwA=="
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "empty"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ilcxc3hPRjBzSWlReVlTUXhNaVJFWlVNM1JWWjVPVTVDYWsxck9HMW5ZV1ZMTG1kbElpd2lNVFl3TkRReE5UZzFPQzR4TmpjNU9UYzRJbDA9IiwiZXhwIjoiMjAyMC0xMS0xN1QxNTowNDoxOC4xNjhaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX3VzZXJfdG9rZW4ifX0%3D--4f9eb6dca7f36691e6541ef48764a7d6dbe74ed7; _nerve_ai_session=Qy19PLWDG9tVjoYlPd9O7iIxP53TDGkhVbRkvlXHD6WJLGdHRv7Nl9Tk5JiyqvbJYSkRYtyZpaeUcEr8%2FknEFJukHVC6TcNnQFc7Xn%2B9OH9di0Wf%2F6%2BpLPFOkx5HYXh4iMOr0M6m9PAKpdShTmGnuSe0iCwrrK8Sk0bNX55QTyYtpjOXW82wBvkE0Itq%2FbZBGnLTzt3MfEbok3jx4ztcNkj%2BWu99L6aSp2onCZAr0inR1GC31%2Fkwuq11iRHfIQMpN51P1MRC%2BwoU6PIkuiGBFbufdNPzOvePW5GL81iM4jcREXEyrTskywgcu45DbzsYRoY3ov8SXC4FzTkcMYPc4zUqssCCxMcGItQiJSe1HXZIFk%2FzjgbsUF0%2FZ1tfhoz5tAhW2Ee2VXsGxP37Nwk%2FWqJ7bRyFH1Zop3zEOWQEKlLJLvqXTCYZ%2BPLZrV7V8IA1LzGRPx8saFcqnU1AeG%2FSa0ZRy75ypvQ2k5nD7ktr7r7gn82Jrwl4DRclqi0qJi90VsJAsFllO1vRdInVhXHzUVAxrCPrSc%2BdCEBs7HAOIWgySbTS4g%3D%3D--q%2BNTX5y3x133dGBA--%2BOaApBAWU%2Bv%2Fy3L75CBmvA%3D%3D"
+									}
+								],
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/users/current",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"users",
+										"current"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "make_step",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Connection",
+										"value": "keep-alive"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json"
+									},
+									{
+										"key": "X-CSRF-Token",
+										"value": "cM7s9Ypwpu34ljTGfx5c3S9bN59SfdsdUL21ngZ+lqX1I+x1m+UvxPczogjUfDqZo4rWO/LzxnPYqT+L20lvqg=="
+									},
+									{
+										"key": "User-Agent",
+										"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json;charset=UTF-8"
+									},
+									{
+										"key": "Origin",
+										"value": "https://xoxotsf.herokuapp.com"
+									},
+									{
+										"key": "Sec-Fetch-Site",
+										"value": "same-origin"
+									},
+									{
+										"key": "Sec-Fetch-Mode",
+										"value": "cors"
+									},
+									{
+										"key": "Sec-Fetch-Dest",
+										"value": "empty"
+									},
+									{
+										"key": "Referer",
+										"value": "https://xoxotsf.herokuapp.com/"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en"
+									},
+									{
+										"key": "Cookie",
+										"value": "remember_user_token=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ilcxc3hPRjBzSWlReVlTUXhNaVJFWlVNM1JWWjVPVTVDYWsxck9HMW5ZV1ZMTG1kbElpd2lNVFl3TkRReE5UZzFPQzR4TmpjNU9UYzRJbDA9IiwiZXhwIjoiMjAyMC0xMS0xN1QxNTowNDoxOC4xNjhaIiwicHVyIjoiY29va2llLnJlbWVtYmVyX3VzZXJfdG9rZW4ifX0%3D--4f9eb6dca7f36691e6541ef48764a7d6dbe74ed7; _nerve_ai_session=wZ8%2B4q%2BQkjgtBBC2Ph9z8jEO4N67UIC5AFGsT3JAMkgUT1PpWwloYEHBaVzpOBIqeW7Bo7YyuHSTgVWo75iiH3n%2Bp9BIXIL%2FWEcp0u2ycGsvufKaBsjRhGRgMH8aOnvwPmKdXMSBVYZmRQ58h0XpOM3nLGovXO9xT9slq5KcIG2g6fXif7RLjL8cce3JaGwTCHmgQwDoPV8Rb6ETjmx6I9m441K5FvEruIDkvlSHApq43ovBWu4seuQ69rLout3WCSZaC6XT3rOCrElp16DjqCTOtIPdPAGIHBtFNvg%2BB25RU8BiHlYkOYLf7o7pAPZT1W%2BBOqp%2BklSbWZCETlkoOv6bfeChd9k42m%2FXF6mkIXGwkAAhLVChjduj1u6mW8t2ISjzs2sPwLi4%2BARxpHK9WaP8svYZOGnwl5m4zCRG2bhHOKK9Rf4FVGib2gp8TAXW2tbIx7HyzMpbqmAoVCtDdUGSFZpECb8OIycItTyq8uEBrROHfJCckYB40R8sTfhwaJPx9p9sJAQfUXa10FCPG%2BGElAcjQUo4paqWbh6sTuNqJwgnWw%3D%3D--UmyNCF5Vm3lRcEgP--v6jt%2BvArMuSo%2BeW8eikiWw%3D%3D"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"cell\":{\"id\":5501,\"game_id\":56,\"x\":1,\"y\":1,\"kind\":null,\"created_at\":\"2020-11-03T15:10:44.379Z\",\"updated_at\":\"2020-11-03T15:10:44.379Z\"}}"
+								},
+								"url": {
+									"raw": "https://xoxotsf.herokuapp.com/games/56/make_step",
+									"protocol": "https",
+									"host": [
+										"xoxotsf",
+										"herokuapp",
+										"com"
+									],
+									"path": [
+										"games",
+										"56",
+										"make_step"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c71153bd-4239-4a1b-9941-9d2ac6740ca0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "385cfb53-a742-4848-94dc-13ddd83ea7ec",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "ab97a8e9-78c3-42ff-887c-cc5d6cdfc8f0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "1c3ac536-571a-4c88-9fd7-bc52fb4a631b",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
